@@ -1,0 +1,20 @@
+sources:
+  - name: raw
+    database: USER_DB_GORILLA
+    schema: raw
+    description: "Schema which stores raw data from ETL"
+    tables:
+      - name: user_session_channel
+        identifier: user_session_channel
+        description: "Session data including userId, sessionId, and channel"
+      - name: session_timestamp
+        identifier: session_timestamp
+        description: "Session data including timestamp"
+  - name: analytics
+    database: USER_DB_GORILLA
+    schema: analytics
+    description: "Schema storing analytics tables (ELT)"
+    tables:
+      - name: session_summary
+        identifier: session_summary
+        description: "Complete session info"
